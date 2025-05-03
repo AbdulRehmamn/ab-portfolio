@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmailJS Setup Guide for Abdul Rehman's Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #3B82F6;
+    }
+    .step {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #3B82F6;
+    }
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    .important {
+      background-color: #FEF2F2;
+      border-left: 5px solid #EF4444;
+      padding: 10px;
+      margin: 20px 0;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>EmailJS Setup Guide for Abdul Rehman's Portfolio</h1>
+  <p>This guide will walk you through setting up EmailJS so that you can receive emails when someone fills out the contact form on your portfolio website.</p>
+
+  <div class="important">
+    <h3>Your Details</h3>
+    <p><strong>Email:</strong> shahidabdulrehman706@gmail.com</p>
+    <p>You'll need to use this email to create your EmailJS account.</p>
+  </div>
+
+  <div class="step">
+    <h2>Step 1: Create an EmailJS Account</h2>
+    <ol>
+      <li>Go to <a href="https://www.emailjs.com/" target="_blank">https://www.emailjs.com/</a></li>
+      <li>Click "Sign Up Free" button</li>
+      <li>Sign up using your email <code>shahidabdulrehman706@gmail.com</code></li>
+      <li>Complete the registration process</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <h2>Step 2: Create an Email Service</h2>
+    <ol>
+      <li>After logging in, go to the "Email Services" section</li>
+      <li>Click the "Add New Service" button</li>
+      <li>Select "Gmail" as your service provider</li>
+      <li>Connect your Gmail account <code>shahidabdulrehman706@gmail.com</code></li>
+      <li>Name your service (e.g., "portfolio_service")</li>
+      <li>Click "Create Service" to finalize</li>
+      <li><strong>Important:</strong> Write down the Service ID (looks like <code>service_xxxxxxx</code>)</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <h2>Step 3: Create an Email Template</h2>
+    <ol>
+      <li>Go to the "Email Templates" section</li>
+      <li>Click "Create New Template"</li>
+      <li>Fill in the details:</li>
+      <ul>
+        <li>Template Name: "Contact Form"</li>
+        <li>Subject: "New contact form submission from {{from_name}}"</li>
+      </ul>
+      <li>Use this content for your email template:</li>
+      <pre>You received a new message from your portfolio contact form:
+
+Name: {{from_name}}
+Email: {{from_email}}
+Subject: {{subject}}
+
+Message:
+{{message}}
+
+--
+This email was sent from your portfolio contact form.</pre>
+      <li>Click "Save" to create your template</li>
+      <li><strong>Important:</strong> Write down the Template ID (looks like <code>template_xxxxxxx</code>)</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <h2>Step 4: Get Your User ID (Public Key)</h2>
+    <ol>
+      <li>Go to the "Account" section</li>
+      <li>Click on "API Keys"</li>
+      <li>Find your Public Key (starts with "user_" or a similar prefix)</li>
+      <li><strong>Important:</strong> Write down this Public Key</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <h2>Step 5: Update Your Code</h2>
+    <ol>
+      <li>Open the file <code>src/components/sections/Contact.tsx</code> in your project</li>
+      <li>Look for these lines:</li>
+      <pre>const EMAILJS_SERVICE_ID = 'service_portfolio';
+const EMAILJS_TEMPLATE_ID = 'template_contact';
+const EMAILJS_USER_ID = 'YOUR_USER_ID';</pre>
+      <li>Replace these values with the ones you collected:</li>
+      <ul>
+        <li>Replace <code>'service_portfolio'</code> with your actual Service ID (like <code>'service_abcdef'</code>)</li>
+        <li>Replace <code>'template_contact'</code> with your actual Template ID (like <code>'template_xyz123'</code>)</li>
+        <li>Replace <code>'YOUR_USER_ID'</code> with your actual Public Key</li>
+      </ul>
+    </ol>
+  </div>
+
+  <div class="step">
+    <h2>Final Step: Test Your Form</h2>
+    <ol>
+      <li>Deploy your website</li>
+      <li>Fill out the contact form on your website</li>
+      <li>Submit the form</li>
+      <li>Check your email <code>shahidabdulrehman706@gmail.com</code> to see if you received the test message</li>
+    </ol>
+  </div>
+
+  <div class="important">
+    <h3>Troubleshooting</h3>
+    <p>If you don't receive emails:</p>
+    <ul>
+      <li>Check your spam folder</li>
+      <li>Verify that all IDs are correctly entered in the code</li>
+      <li>Make sure your EmailJS account is properly set up</li>
+      <li>Check if you have exceeded the free tier limits (200 emails per month)</li>
+    </ul>
+  </div>
+
+</body>
+</html>
