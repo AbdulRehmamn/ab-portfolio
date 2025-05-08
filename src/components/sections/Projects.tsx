@@ -49,7 +49,26 @@ const projects: Project[] = [
     liveUrl: "https://mind-logic-vlsf.vercel.app/",
     category: ["website", "corporate"],
     technologies: ["React", "SCSS", "Gsap Animation"]
-  }
+  },
+  {
+    id: "AI-Remoer",
+    title: "Ai-Remover Website",
+    description: "A modern website for a AI detection remover or humanize AI Written text.",
+    image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=2070&auto=format&fit=crop",
+    liveUrl: "https://ai-remover.vercel.app/",
+    category: ["website", "AI-Remover"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+  },
+  {
+    id: "AI-Detection",
+    title: "AI-Detection Website",
+    description: "A modern website for AI detection to determine how much content is written by AI.",
+    image:"",
+    liveUrl: "https://ai-detection-ten.vercel.app/",
+    category: ["website", "AI-Remover"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
+
 ];
 
 const categories = [
@@ -58,6 +77,8 @@ const categories = [
   { id: "app", name: "Apps" },
   { id: "ecommerce", name: "E-commerce" },
   { id: "clone", name: "Clones" },
+  {id:"AI-Remover" , name: "AI-remover"} ,
+ { id : "AI-Dectection , name: AI-Dection"}
 ];
 
 const Projects = () => {

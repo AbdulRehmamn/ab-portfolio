@@ -24,23 +24,23 @@ const skillCategories: SkillCategory[] = [
   {
     name: 'Development',
     icon: <FiCode size={32} />,
-    skills: ['TypeScript', 'ES6+', 'React Hooks', 'Context API', 'Redux', 'Next.js'],
+    skills: ['JavaScript', 'ES6+', 'React Hooks', 'Context API', 'Redux'],
   },
   {
     name: 'Tools',
     icon: <FiTool size={32} />,
-    skills: ['VS Code', 'npm/yarn', 'Webpack', 'Figma', 'Adobe XD', 'Chrome DevTools'],
+    skills: ['VS Code', 'npm/yarn', 'Webpack', 'Figma',  'Chrome DevTools'],
   },
   {
     name: 'Version Control',
     icon: <FiGitBranch size={32} />,
-    skills: ['Git', 'GitHub', 'GitLab', 'Bitbucket', 'CI/CD', 'Pull Requests'],
+    skills: ['Git', 'GitHub',   'CI/CD', 'Pull Requests'],
   },
-  {
-    name: 'Backend',
-    icon: <FiDatabase size={32} />,
-    skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Databases', 'Authentication', 'Testing'],
-  },
+  // {
+  //   name: 'Backend',
+  //   icon: <FiDatabase size={32} />,
+  //   skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Databases', 'Authentication', 'Testing'],
+  // },
   {
     name: 'Others',
     icon: <FiSettings size={32} />,

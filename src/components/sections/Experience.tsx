@@ -36,38 +36,38 @@ const timelineItems: TimelineItem[] = [
     description: "Worked as a Front-End Intern in the MIS Department. I worked with HTML, CSS, JavaScript and React.js to help create and improve websites with focus on responsiveness.",
     type: "work"
   },
-  {
-    title: "Shopify Agency Website",
-    organization: "Freelance Project",
-    date: "2024",
-    location: "Remote",
-    description: "Developed a responsive Shopify agency website with modern design and functionality.",
-    type: "work"
-  },
-  {
-    title: "YouTube Clone",
-    organization: "Freelance Project",
-    date: "2024",
-    location: "Remote",
-    description: "Created a YouTube clone with React.js, implementing core video platform functionality.",
-    type: "work"
-  },
-  {
-    title: "E-commerce Website",
-    organization: "Freelance Project",
-    date: "2023",
-    location: "Remote",
-    description: "Built a fully functional e-commerce website with product listings, cart, and checkout features.",
-    type: "work"
-  },
-  {
-    title: "Company Website",
-    organization: "Freelance Project",
-    date: "2023",
-    location: "Remote",
-    description: "Developed a professional company website with multiple pages and responsive design.",
-    type: "work"
-  }
+  // {
+  //   title: "Shopify Agency Website",
+  //   organization: "Freelance Project",
+  //   date: "2024",
+  //   location: "Remote",
+  //   description: "Developed a responsive Shopify agency website with modern design and functionality.",
+  //   type: "work"
+  // },
+  // {
+  //   title: "YouTube Clone",
+  //   organization: "Freelance Project",
+  //   date: "2024",
+  //   location: "Remote",
+  //   description: "Created a YouTube clone with React.js, implementing core video platform functionality.",
+  //   type: "work"
+  // },
+  // {
+  //   title: "E-commerce Website",
+  //   organization: "Freelance Project",
+  //   date: "2023",
+  //   location: "Remote",
+  //   description: "Built a fully functional e-commerce website with product listings, cart, and checkout features.",
+  //   type: "work"
+  // },
+  // {
+  //   title: "Company Website",
+  //   organization: "Freelance Project",
+  //   date: "2023",
+  //   location: "Remote",
+  //   description: "Developed a professional company website with multiple pages and responsive design.",
+  //   type: "work"
+  // }
 ];
 
 const Experience = () => {
