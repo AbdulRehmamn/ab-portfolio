@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAnimateOnScroll } from '../../hooks/useAnimateOnScroll';
 import { FiExternalLink, FiGithub, FiFilter } from 'react-icons/fi';
+import { img } from 'framer-motion/client';
 
 interface Project {
   id: string;
@@ -54,7 +55,7 @@ const projects: Project[] = [
     id: "AI-Remoer",
     title: "Ai-Remover Website",
     description: "A modern website for a AI detection remover or humanize AI Written text.",
-    image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=2070&auto=format&fit=crop",
+    image:"1.png",
     liveUrl: "https://ai-remover.vercel.app/",
     category: ["website", "AI-Remover"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
@@ -63,7 +64,7 @@ const projects: Project[] = [
     id: "AI-Detection",
     title: "AI-Detection Website",
     description: "A modern website for AI detection to determine how much content is written by AI.",
-    image:"",
+    image:"2.png",
     liveUrl: "https://ai-detection-ten.vercel.app/",
     category: ["website", "AI-Remover"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
