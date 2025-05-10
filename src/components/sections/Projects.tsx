@@ -69,6 +69,15 @@ const projects: Project[] = [
     category: ["website", "AI-Remover"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
+{
+    id: "MP4 to MP3 converter",
+    title: "MP4 to MP3 converter Website",
+    description: "A modern website for MP4 to MP3 converter .",
+    image:"3.png",
+    liveUrl: "https://mp4-to-mp3-one.vercel.app/",
+    category: ["website", "Mp4 to Mp3"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
 
 ];
 
