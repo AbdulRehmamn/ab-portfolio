@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: "E-commerce Website",
     description: "A fully functional e-commerce platform with product listings, cart, checkout, and user accounts.",
     image: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=1974&auto=format&fit=crop",
-    liveUrl: "https://same-wxnwghw42of-latest.netlify.app/",
+    liveUrl: "https://e-commerce-alpha-beige.vercel.app/",
     category: ["website", "ecommerce"],
     technologies: ["React", "Redux", "Tailwind CSS", "Stripe"]
   },
