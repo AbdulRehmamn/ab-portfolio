@@ -87,6 +87,15 @@ const projects: Project[] = [
     category: ["website", "Text to speech"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
+{
+    id: "Weather report",
+    title: "Real time weather report",
+    description: "A modern website for Weather Report",
+    image:"5.png",
+    liveUrl: "https://weather-eta-tan.vercel.app/",
+    category: ["website", "Weather Report"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
 
 
 ];
