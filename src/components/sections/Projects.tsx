@@ -96,6 +96,15 @@ const projects: Project[] = [
     category: ["website", "Weather Report"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
+{
+    id: "MP4 video downloader",
+    title: "MP4 video downloader Website",
+    description: "A modern website for MP4 video downloader .",
+    image:"7.png",
+    liveUrl: "https://mp4-converter.vercel.app/",
+    category: ["website", "Mp4 to Mp3"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
 
 
 ];
