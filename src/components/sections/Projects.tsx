@@ -102,7 +102,7 @@ const projects: Project[] = [
     description: "A modern website for MP4 video downloader .",
     image:"7.png",
     liveUrl: "https://mp4-converter.vercel.app/",
-    category: ["website", "Mp4 to Mp3"],
+    category: ["website", "MP4 video downloader"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
 {
@@ -111,7 +111,16 @@ const projects: Project[] = [
     description: "A modern website for Insta video downloader .",
     image:"8.png",
     liveUrl: "https://insta-video-downloader-delta.vercel.app/",
-    category: ["website", "Mp4 to Mp3"],
+    category: ["website", "Insta video downloader"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
+{
+    id: "AI-Assistant",
+    title: "AI-Assistant",
+    description: "A modern website for AI-Assistant .",
+    image:"9.png",
+    liveUrl: "https://ai-assistant-theta-vert.vercel.app/",
+    category: ["website", "AI-Assistant"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
 
