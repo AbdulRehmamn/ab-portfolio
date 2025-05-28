@@ -114,15 +114,15 @@ const projects: Project[] = [
     category: ["website", "Insta video downloader"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
-// {
-//     id: "AI-Assistant",
-//     title: "AI-Assistant",
-//     description: "A modern website for AI-Assistant .",
-//     image:"9.png",
-//     liveUrl: "https://ai-assistant-theta-vert.vercel.app/",
-//     category: ["website", "AI-Assistant"],
-//     technologies: ["React", "Tailwind CSS", "Framer Motion"]
-// },
+{
+    id: "AI-Assistant",
+    title: "AI-Assistant",
+    description: "A modern website for AI-Assistant .",
+    image:"9.png",
+    liveUrl: "https://ai-assistant1-psi.vercel.app/",
+    category: ["website", "AI-Assistant"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
 
 
 
