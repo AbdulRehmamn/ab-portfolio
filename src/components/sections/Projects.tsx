@@ -105,6 +105,16 @@ const projects: Project[] = [
     category: ["website", "Mp4 to Mp3"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
+{
+    id: "Insta video downloader",
+    title: "Insta video downloader Website",
+    description: "A modern website for Insta video downloader .",
+    image:"8.png",
+    liveUrl: "https://insta-video-downloader-delta.vercel.app/",
+    category: ["website", "Mp4 to Mp3"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
+
 
 
 ];
