@@ -123,6 +123,15 @@ const projects: Project[] = [
     category: ["website", "AI-Assistant"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
+{
+    id: "Watch Store",
+    title: "Watch Store",
+    description: "A modern website for Watch Store .",
+    image:"10.png",
+    liveUrl: "https://watch-store-orpin.vercel.app/",
+    category: ["website", "wATCH sTORE"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
 
 
 
