@@ -87,15 +87,7 @@ const projects: Project[] = [
     category: ["website", "Text-to-Image"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
-// {
-//     id: "Text to speech",
-//     title: "Text to speech Website",
-//     description: "A modern website for Text to speech.",
-//     image:"4.png",
-//     liveUrl: "https://text-to-voice-eosin.vercel.app/",
-//     category: ["website", "Text to speech"],
-//     technologies: ["React", "Tailwind CSS", "Framer Motion"]
-// },
+
 {
     id: "Weather report",
     title: "Real time weather report",
@@ -148,6 +140,15 @@ const projects: Project[] = [
     image:"11.png",
     liveUrl: "https://text-to-image-phi-three.vercel.app/",
     category: ["website", "Text-to-Image"],
+    technologies: ["React", "Tailwind CSS", "Framer Motion"]
+},
+{
+    id: "Text to speech",
+    title: "Text to speech Website",
+    description: "A modern website for Text to speech.",
+    image:"4.png",
+    liveUrl: "https://text-to-voice-eosin.vercel.app/",
+    category: ["website", "Text to speech"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
 
