@@ -137,7 +137,7 @@ const projects: Project[] = [
     title: "Text-to-Image",
     description: "A modern website for Text to image genration .",
     image:"11.png",
-    liveUrl: "https://text-to-image-kohl-two.vercel.app/",
+    liveUrl: "https://text-to-image-phi-three.vercel.app/",
     category: ["website", "Text-to-Image"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
