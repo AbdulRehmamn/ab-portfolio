@@ -133,15 +133,7 @@ const projects: Project[] = [
     category: ["website", "wATCH sTORE"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
-{
-    id: "Text-to-Image",
-    title: "Text-to-Image",
-    description: "A modern website for Text to image genration .",
-    image:"11.png",
-    liveUrl: "https://text-to-image-phi-three.vercel.app/",
-    category: ["website", "Text-to-Image"],
-    technologies: ["React", "Tailwind CSS", "Framer Motion"]
-},
+
 {
     id: "Text to speech",
     title: "Text to speech Website",
