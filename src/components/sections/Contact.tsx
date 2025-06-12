@@ -1,31 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAnimateOnScroll } from '../../hooks/useAnimateOnScroll';
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend } from 'react-icons/fi';
-import emailjs from 'emailjs-com';
 
-/*
-===== IMPORTANT: EmailJS SETUP INSTRUCTIONS =====
-1. Sign up for a free account at https://www.emailjs.com/ using your email shahidabdulrehman706@gmail.com
-2. Create a new Email Service (connect your Gmail account shahidabdulrehman706@gmail.com)
-3. Create a new Email Template with the following variables:
-   - {{from_name}} - The name of the person who filled out the form
-   - {{from_email}} - The email of the person who filled out the form
-   - {{subject}} - The subject of the message
-   - {{message}} - The message content
-
-4. Get your EmailJS credentials from your EmailJS dashboard:
-   - Service ID: Found in the Email Services section
-   - Template ID: Found in the Email Templates section
-   - User ID/Public Key: Found in Account > API Keys
-
-5. Replace these placeholder values with your actual EmailJS credentials
-*/
-// Replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = 'service_portfolio';
-const EMAILJS_TEMPLATE_ID = 'template_contact';
-const EMAILJS_USER_ID = 'YOUR_USER_ID';
 const YOUR_EMAIL = 'shahidabdulrehman706@gmail.com'; // Your email address to receive messages
+const WEB3FORMS_ACCESS_KEY = '05a7ceac-8b59-45da-99b8-416bcb4957b9'; // Your Web3Forms access key
 
 const Contact = () => {
   const { ref: sectionRef, isVisible: sectionIsVisible } = useAnimateOnScroll({ threshold: 0.1 });
@@ -39,11 +18,6 @@ const Contact = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
-  useEffect(() => {
-    // Initialize EmailJS with user ID
-    emailjs.init(EMAILJS_USER_ID);
-  }, []);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -55,38 +29,52 @@ const Contact = () => {
     setSubmitError('');
 
     try {
-      // Prepare template parameters - ensure to_email is set to your email
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_name: 'Abdul Rehman',
-        to_email: YOUR_EMAIL, // Ensures email is sent to your address
-        reply_to: formData.email
-      };
+      // Prepare form data for Web3Forms
+      const formDataToSend = new FormData();
+      formDataToSend.append('access_key', WEB3FORMS_ACCESS_KEY);
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
+      
+      // Add additional fields for better email formatting
+      formDataToSend.append('from_name', formData.name);
+      formDataToSend.append('reply_to', formData.email);
 
-      // Send email using EmailJS
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams
-      );
+      // Convert FormData to JSON
+      const object = Object.fromEntries(formDataToSend);
+      const json = JSON.stringify(object);
 
-      setSubmitSuccess(true);
-
-      // Reset form after success
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+      // Send email using Web3Forms API
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
       });
 
-      // Reset success status after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
+      const result = await response.json();
+
+      if (response.status === 200) {
+        setSubmitSuccess(true);
+        
+        // Reset form after success
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+
+        // Reset success status after 5 seconds
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
     } catch (error) {
       console.error('Email sending failed:', error);
       setSubmitError('Failed to send message. Please try again or contact directly via email.');
@@ -224,6 +212,10 @@ const Contact = () => {
 
               {submitError && (
                 <p className="text-red-600 text-sm font-medium">{submitError}</p>
+              )}
+
+              {submitSuccess && (
+                <p className="text-green-600 text-sm font-medium">Message sent successfully! I'll get back to you soon.</p>
               )}
 
               <motion.button
