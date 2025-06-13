@@ -120,7 +120,7 @@ const projects: Project[] = [
     title: "AI-Assistant",
     description: "A modern website for AI-Assistant .",
     image:"9.png",
-    liveUrl: "https://ai-assistant1-psi.vercel.app/",
+    liveUrl: "https://ai-assistant-ra2h.vercel.app/",
     category: ["website", "AI-Assistant"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
