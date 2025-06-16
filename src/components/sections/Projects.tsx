@@ -52,11 +52,11 @@ const projects: Project[] = [
     technologies: ["React", "SCSS", "Gsap Animation"]
   },
   {
-    id: "AI-Remoer",
+    id: "AI-Humanizer",
     title: "Ai-Remover Website",
     description: "A modern website for a AI detection remover or humanize AI Written text.",
     image:"1.png",
-    liveUrl: "https://ai-remover.vercel.app/",
+    liveUrl: "https://ai-text-humanizer-weld.vercel.app/",
     category: ["website", "AI-Remover"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
   },
