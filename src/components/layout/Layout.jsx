@@ -1,15 +1,11 @@
-import { type ReactNode, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Loader from '../ui/Loader';
 import { ThemeProvider } from '../../context/ThemeContext';
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   // Simulate loading time

@@ -9,13 +9,7 @@ import {
   FiGitBranch
 } from 'react-icons/fi';
 
-interface SkillCategory {
-  name: string;
-  icon: JSX.Element;
-  skills: string[];
-}
-
-const skillCategories: SkillCategory[] = [
+const skillCategories = [
   {
     name: 'Frontend',
     icon: <FiLayout size={32} />,
@@ -36,11 +30,6 @@ const skillCategories: SkillCategory[] = [
     icon: <FiGitBranch size={32} />,
     skills: ['Git', 'GitHub',   'CI/CD', 'Pull Requests'],
   },
-  // {
-  //   name: 'Backend',
-  //   icon: <FiDatabase size={32} />,
-  //   skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Databases', 'Authentication', 'Testing'],
-  // },
   {
     name: 'Others',
     icon: <FiSettings size={32} />,
@@ -55,7 +44,7 @@ const Skills = () => {
     <section
       id="skills"
       className="py-20 bg-muted/30 relative overflow-hidden"
-      ref={sectionRef as React.RefObject<HTMLDivElement>}
+      ref={sectionRef}
     >
       {/* Background patterns */}
       <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-5 -z-10" />
@@ -113,13 +102,7 @@ const Skills = () => {
   );
 };
 
-interface SkillCardProps {
-  category: SkillCategory;
-  index: number;
-  isVisible: boolean;
-}
-
-const SkillCard = ({ category, index, isVisible }: SkillCardProps) => {
+const SkillCard = ({ category, index, isVisible }) => {
   return (
     <motion.div
       className="bg-card rounded-xl overflow-hidden shadow-md border border-border hover-lift"

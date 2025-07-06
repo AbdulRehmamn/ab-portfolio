@@ -2,16 +2,7 @@ import { motion } from 'framer-motion';
 import { useAnimateOnScroll } from '../../hooks/useAnimateOnScroll';
 import { FiBriefcase, FiBookOpen, FiCalendar, FiMapPin } from 'react-icons/fi';
 
-interface TimelineItem {
-  title: string;
-  organization: string;
-  date: string;
-  location: string;
-  description: string;
-  type: 'education' | 'work';
-}
-
-const timelineItems: TimelineItem[] = [
+const timelineItems = [
   {
     title: "Bachelor of Software Engineering",
     organization: "University of Central Punjab, Lahore",
@@ -35,39 +26,7 @@ const timelineItems: TimelineItem[] = [
     location: "MIS Department",
     description: "Worked as a Front-End Intern in the MIS Department. I worked with HTML, CSS, JavaScript and React.js to help create and improve websites with focus on responsiveness.",
     type: "work"
-  },
-  // {
-  //   title: "Shopify Agency Website",
-  //   organization: "Freelance Project",
-  //   date: "2024",
-  //   location: "Remote",
-  //   description: "Developed a responsive Shopify agency website with modern design and functionality.",
-  //   type: "work"
-  // },
-  // {
-  //   title: "YouTube Clone",
-  //   organization: "Freelance Project",
-  //   date: "2024",
-  //   location: "Remote",
-  //   description: "Created a YouTube clone with React.js, implementing core video platform functionality.",
-  //   type: "work"
-  // },
-  // {
-  //   title: "E-commerce Website",
-  //   organization: "Freelance Project",
-  //   date: "2023",
-  //   location: "Remote",
-  //   description: "Built a fully functional e-commerce website with product listings, cart, and checkout features.",
-  //   type: "work"
-  // },
-  // {
-  //   title: "Company Website",
-  //   organization: "Freelance Project",
-  //   date: "2023",
-  //   location: "Remote",
-  //   description: "Developed a professional company website with multiple pages and responsive design.",
-  //   type: "work"
-  // }
+  }
 ];
 
 const Experience = () => {
@@ -80,7 +39,7 @@ const Experience = () => {
     <section
       id="experience"
       className="py-20 relative overflow-hidden"
-      ref={sectionRef as React.RefObject<HTMLDivElement>}
+      ref={sectionRef}
     >
       {/* Background accents */}
       <div className="absolute top-1/3 right-10 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl -z-10" />
@@ -154,13 +113,7 @@ const Experience = () => {
   );
 };
 
-interface TimelineCardProps {
-  item: TimelineItem;
-  index: number;
-  isVisible: boolean;
-}
-
-const TimelineCard = ({ item, index, isVisible }: TimelineCardProps) => {
+const TimelineCard = ({ item, index, isVisible }) => {
   return (
     <motion.div
       className="relative pl-6 border-l-2 border-muted"

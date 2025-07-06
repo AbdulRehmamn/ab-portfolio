@@ -2,19 +2,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAnimateOnScroll } from '../../hooks/useAnimateOnScroll';
 import { FiExternalLink, FiGithub, FiFilter } from 'react-icons/fi';
-import { img } from 'framer-motion/client';
 
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  liveUrl: string;
-  category: string[];
-  technologies: string[];
-}
-
-const projects: Project[] = [
+const projects = [
   {
     id: "shopify-agency",
     title: "Shopify Agency Website",
@@ -177,7 +166,7 @@ const Projects = () => {
     <section
       id="projects"
       className="py-20 bg-muted/30 relative overflow-hidden"
-      ref={sectionRef as React.RefObject<HTMLDivElement>}
+      ref={sectionRef}
     >
       {/* Background effects */}
       <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-5 -z-10" />
@@ -277,13 +266,7 @@ const Projects = () => {
   );
 };
 
-interface ProjectCardProps {
-  project: Project;
-  index: number;
-  isVisible: boolean;
-}
-
-const ProjectCard = ({ project, index, isVisible }: ProjectCardProps) => {
+const ProjectCard = ({ project, index, isVisible }) => {
   return (
     <motion.div
       className="group bg-card rounded-xl overflow-hidden shadow-md border border-border hover-lift"

@@ -9,7 +9,7 @@ const About = () => {
     <section
       id="about"
       className="py-20 relative overflow-hidden"
-      ref={sectionRef as React.RefObject<HTMLDivElement>}
+      ref={sectionRef}
     >
       {/* Background accents */}
       <div className="absolute top-1/3 right-0 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl -z-10" />
@@ -33,7 +33,7 @@ const About = () => {
 
         <div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-          ref={contentRef as React.RefObject<HTMLDivElement>}
+          ref={contentRef}
         >
           {/* Image */}
           <motion.div

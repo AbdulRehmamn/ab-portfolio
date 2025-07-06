@@ -1,16 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-interface AnimationOptions {
-  threshold?: number;
-  rootMargin?: string;
-  once?: boolean;
-  animationType?: 'fade' | 'slide-up' | 'slide-left' | 'slide-right' | 'scale' | 'rotate' | 'spiral-3d';
-  duration?: string;
-  delay?: string;
-  easing?: string;
-}
-
-export const useAnimateOnScroll = (options: AnimationOptions = {}) => {
+export const useAnimateOnScroll = (options = {}) => {
   const {
     threshold = 0.1,
     rootMargin = '0px',
@@ -21,7 +11,7 @@ export const useAnimateOnScroll = (options: AnimationOptions = {}) => {
     easing = 'ease-in-out'
   } = options;
 
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

@@ -18,12 +18,12 @@ const Contact = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitError('');
@@ -108,7 +108,7 @@ const Contact = () => {
     <section
       id="contact"
       className="py-20 relative overflow-hidden"
-      ref={sectionRef as React.RefObject<HTMLDivElement>}
+      ref={sectionRef}
     >
       {/* Background effects */}
       <div className="absolute top-1/3 left-0 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl -z-10" />

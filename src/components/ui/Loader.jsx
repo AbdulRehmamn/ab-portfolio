@@ -1,11 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-interface LoaderProps {
-  onLoadingComplete: () => void;
-}
-
-const Loader = ({ onLoadingComplete }: LoaderProps) => {
+const Loader = ({ onLoadingComplete }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {

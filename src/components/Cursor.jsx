@@ -7,7 +7,7 @@ const Cursor = () => {
 
   // Get mouse position
   useEffect(() => {
-    const mouseMove = (e: MouseEvent) => {
+    const mouseMove = (e) => {
       setMousePosition({
         x: e.clientX,
         y: e.clientY,
