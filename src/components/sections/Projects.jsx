@@ -45,7 +45,7 @@ const projects = [
     title: "Ai-Remover Website",
     description: "A modern website for a AI detection remover or humanize AI Written text.",
     image:"1.png",
-    liveUrl: "https://ai-text-humanizer-weld.vercel.app/",
+    liveUrl: "https://ai-remover.vercel.app/",
     category: ["website", "AI-Remover"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
   },
