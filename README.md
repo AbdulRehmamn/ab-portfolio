@@ -56,6 +56,4 @@ bun run dev
 bun run build
 ```
 
-## Deployment
 
-The site is deployed on Netlify at: https://same-hgrokk0t8cl-latest.netlify.app
