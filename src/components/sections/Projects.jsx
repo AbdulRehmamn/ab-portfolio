@@ -137,7 +137,7 @@ const projects = [
     title: "Word To PDF Website",
     description: "A modern website for Word To PDF.",
     image:"12.png",
-    liveUrl: "https://word-to-pdf-rho.vercel.app/",
+    liveUrl: "https://word-to-pdf-chi.vercel.app/",
     category: ["website", "Word To PDF"],
     technologies: ["React", "Tailwind CSS", "Framer Motion"]
 },
