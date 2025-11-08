@@ -33,14 +33,7 @@ const Footer = () => {
             </p>
 
             {/* Admin Link */}
-            <a
-              href="/emailjs-setup.html"
-              target="_blank"
-              className="text-xs flex items-center mt-2 text-muted-foreground hover:text-primary transition-colors" rel="noreferrer"
-            >
-              <FiSettings className="mr-1" size={12} />
-              <span>EmailJS Setup</span>
-            </a>
+           
           </div>
 
           <div className="flex flex-col items-center md:items-end">
